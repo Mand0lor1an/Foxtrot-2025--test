@@ -3,8 +3,8 @@ package frc.robot.subsystems.Pivot;
 import org.littletonrobotics.junction.AutoLog;
 
 public interface PivotIO {
-    public void getAngle(double angle);
-    public void setDesiredAngle();
+    public double getAngle();
+    public void setDesiredAngle(double angle);
     public void stop();
 
     default void updateInputs(PivotIOInputs inputs) {}

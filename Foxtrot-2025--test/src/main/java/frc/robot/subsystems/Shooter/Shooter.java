@@ -29,7 +29,8 @@ public class Shooter extends SubsystemBase{
     public enum ShooterState{
         IDLE,
         ACCELERATING,
-        READY
+        READY,
+        SOURCE_I
     }
 
     public ShooterState state = ShooterState.IDLE;
@@ -73,6 +74,9 @@ public class Shooter extends SubsystemBase{
                     break;
                 }
                 break;
+
+            case SOURCE_I:
+            io.setVelocity(ShooterConstants.kSpeakerSpeedLeftOpp, ShooterConstants.kSpeakerSpeedRightOpp);
         }
 
 

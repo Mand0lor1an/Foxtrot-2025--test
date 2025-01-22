@@ -26,30 +26,18 @@ public final class Constants {
     public static final double kPivotMotorRot2Rad = kGearRatio * 2 * Math.PI;
     public static final double kMinShooterAngleRad = 0;
     public static final double kMaxShooterAngleRad = Math.toRadians(39);
-
     public static final int kPivotMotorId = 3;
     public static final int kAbsoluteEncoderId = 54;
-
     public static final double kAbsoluteEncoderOffset = 0.011;
     public static final boolean kPivotMotorReversed = true;
-
-    public static final double kAngleP = 1;
-    public static final double kAngleI = 0;
-    public static final double kAngleD = 0;
-    public static final double kAngleToleranceRad = Math.toRadians(0.05);
-
-    ////////////////////////////////////////////////////////////////////////////////
-    
-    
+    public static final double kPivotP = 1;
+    public static final double kPivotI = 0;
+    public static final double kPivotD = 0;
+    public static final double kPivotToleranceRad = Math.toRadians(0.05);
     public static final int kShooterMotorLeftId = 7;
     public static final int kShooterMotorRightId = 8;    
-
-  
     public static final TalonFXConfiguration leftMotorConfig = new TalonFXConfiguration();
-
-    // set slot 0 gains
     private static final Slot0Configs left_slot0Configs;
-
     static {
       left_slot0Configs = leftMotorConfig.Slot0;
       left_slot0Configs.kS = 0.27698; // Add 0.25 V output to overcome static friction
@@ -94,6 +82,9 @@ public final class Constants {
     }
     public static final double kSpeakerSpeedLeft = 64.3;
     public static final double kSpeakerSpeedRight = 52.3;
+
+    public static final double kSpeakerSpeedLeftOpp = -52.3;
+    public static final double kSpeakerSpeedRightOpp = -52.3;
 
     public static final double kAmpSpeedLeft = 21.5;
     public static final double kAmpSpeedRight = 21.5;
